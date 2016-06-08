@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Module Example App</title>
+    </head>
+    <body ng-app="MainApp">
+        <div ng-view></div>
+    </body>
+</html>
+
+<html lang="en" ng-app="uiRouterSample">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Include angular.js, angular-animate.js and angular-ui-router.js-->
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+
+    <!-- app.js declares the uiRouterSample module and adds items to $rootScope, and defines
+         the "home" and "about" states
+    -->
+    <script src="app/app.js"></script>
+
+    <!-- contacts.js declares the uiRouterSample.contacts module, and adds a number of contact
+         related states
+    -->
+    <script src="app/contacts/contacts.js"></script>
+
+    <!-- contacts-service.js, and utils-service.js define services for use by the
+         uiRouterSample.contacts module.
+    -->
+    <script src="app/contacts/contacts-service.js"></script>
+    <script src="common/utils/utils-service.js"></script>
+
+    <!-- could easily use a custom property of the state here instead of 'name' -->
+    <title ng-bind="$state.current.name + ' - ui-router'">ui-router</title>
+  </head>
+  <body>
+
+  </body>
+</html>
